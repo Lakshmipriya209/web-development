@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ReTrade | Buy & Sell Used Products</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="navbar">
+    <h1 class="logo">Re<span>Trade</span></h1>
+    <input type="text" id="searchInput" placeholder="Search products...">
+    <button id="myAdsBtn" class="secondary-btn">My Ads</button>
+    <button id="postAdBtn">+ Post Ad</button>
+  </header>
+
+  <!-- Category Filter -->
+  <div class="category-bar">
+    <button class="cat-btn active" data-cat="all">All</button>
+    <button class="cat-btn" data-cat="electronics">Electronics</button>
+    <button class="cat-btn" data-cat="furniture">Furniture</button>
+    <button class="cat-btn" data-cat="vehicles">Vehicles</button>
+    <button class="cat-btn" data-cat="books">Books</button>
+  </div>
+
+  <!-- Listings Grid -->
+  <main class="listings-grid" id="listingsGrid">
+    <!-- Product cards injected by JS -->
+  </main>
+
+  <!-- Product Detail Modal (Buy Side) -->
+  <div class="modal-overlay" id="detailOverlay">
+    <div class="modal" id="detailModal">
+      <!-- Filled dynamically by JS -->
+    </div>
+  </div>
+
+  <!-- Post Ad Modal -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal">
+      <h2>Post a New Ad</h2>
+      <form id="adForm">
+        <input type="text" id="titleInput" placeholder="Product title" required>
+        <input type="number" id="priceInput" placeholder="Price (₹)" required>
+        <select id="categoryInput" required>
+          <option value="">Select category</option>
+          <option value="electronics">Electronics</option>
+          <option value="furniture">Furniture</option>
+          <option value="vehicles">Vehicles</option>
+          <option value="books">Books</option>
+        </select>
+        <textarea id="descInput" placeholder="Description" required></textarea>
+        <input type="text" id="imageInput" placeholder="Image URL (optional)">
+        <div class="modal-actions">
+          <button type="button" id="cancelBtn">Cancel</button>
+          <button type="submit">Post</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
